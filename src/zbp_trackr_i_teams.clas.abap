@@ -1,0 +1,5 @@
+CLASS zbp_trackr_i_teams DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF ytrackr_i_teams.
+ENDCLASS.
+
+CLASS zbp_trackr_i_teams IMPLEMENTATION.
+ENDCLASS.

@@ -1,0 +1,5 @@
+CLASS zbp_trackr_c_status DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF ytrackr_c_status.
+ENDCLASS.
+
+CLASS zbp_trackr_c_status IMPLEMENTATION.
+ENDCLASS.

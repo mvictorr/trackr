@@ -1,0 +1,5 @@
+CLASS zbp_trackr_i_emp_prj DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF ytrackr_i_emp_prj.
+ENDCLASS.
+
+CLASS zbp_trackr_i_emp_prj IMPLEMENTATION.
+ENDCLASS.

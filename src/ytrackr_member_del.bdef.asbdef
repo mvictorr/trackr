@@ -1,0 +1,20 @@
+managed implementation in class zbp_trackr_member_del unique;
+strict;
+
+define behavior for ytrackr_member_del //alias <alias_name>
+persistent table YTRACKR_MEMBERS
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  mapping for ytrackr_members
+  {
+  TeamUuid = team_uuid;
+  TmemberUuid = tmember_uuid;
+  }
+
+}

@@ -1,0 +1,5 @@
+CLASS zbp_trackr_i_projects DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF ytrackr_i_projects.
+ENDCLASS.
+
+CLASS zbp_trackr_i_projects IMPLEMENTATION.
+ENDCLASS.

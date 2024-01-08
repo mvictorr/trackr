@@ -1,0 +1,5 @@
+CLASS zbp_trackr_member_del DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF ytrackr_member_del.
+ENDCLASS.
+
+CLASS zbp_trackr_member_del IMPLEMENTATION.
+ENDCLASS.

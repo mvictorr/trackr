@@ -1,0 +1,24 @@
+managed implementation in class zbp_trackr_i_teams unique;
+strict;
+
+define behavior for ytrackr_i_teams //alias <alias_name>
+persistent table ytrackr_teams
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly, numbering : managed ) TeamUuid;
+  field ( mandatory ) PeopleCounselor, Manager, TeamName;
+
+  mapping for ytrackr_teams
+  {
+    PeopleCounselor = people_counselor;
+    Manager = manager;
+    TeamName = team_name;
+    TeamUuid = team_uuid;
+  }
+}

@@ -1,0 +1,26 @@
+managed implementation in class zbp_trackr_i_projects unique;
+strict;
+
+define behavior for ytrackr_i_projects //alias <alias_name>
+persistent table ytrackr_projects
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+
+  field ( readonly, numbering : managed ) ProjUuid;
+  field ( mandatory ) ProjManager, ProjName, Stream, DeliveryManager;
+
+  mapping for ytrackr_projects
+  {
+    ProjManager = proj_manager;
+    ProjName = proj_name;
+    ProjUuid = proj_uuid;
+    Stream = stream;
+    DeliveryManager = delievery_manager;
+  }
+}

@@ -1,0 +1,34 @@
+managed implementation in class zbp_trackr_i_employee unique;
+strict;
+
+define behavior for ytrackr_i_employee //alias <alias_name>
+persistent table ytrackr_employee
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+
+  field ( mandatory ) Department, LastName, FirstName, Role, Jobtime;
+  field ( readonly, numbering : managed ) EmpUuid;
+
+  mapping for ytrackr_employee
+  {
+    DateOfEmpl = date_of_empl;
+    Department = department;
+    Email = email;
+    EmpUuid = emp_uuid;
+    FirstName = first_name;
+    Jobtime = jobtime;
+    LastName = last_name;
+    Location = location;
+    Role = role;
+    Utilization = utilization;
+    Username = username;
+    Skillset = skillset;
+    Utilizationn = utilizationn;
+  }
+}

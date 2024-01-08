@@ -1,0 +1,26 @@
+managed implementation in class zbp_trackr_i_emp_prj unique;
+strict;
+
+define behavior for ytrackr_i_emp_prj //alias <alias_name>
+persistent table ytrackr_emprj
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  validation checkProjDays on save { field ProjDaysPerWeek; create; update; }
+
+  field ( mandatory ) ProjDaysPerWeek, Status;
+
+  mapping for ytrackr_emprj
+  {
+    Comments = comments;
+    EmpUuid = emp_uuid;
+    ProjDaysPerWeek = proj_days_per_week;
+    ProjUuid = proj_uuid;
+    Status = status;
+  }
+}

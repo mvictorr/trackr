@@ -1,0 +1,37 @@
+unmanaged implementation in class zbp_trackr_c_status unique;
+strict;
+
+define behavior for YTRACKR_C_STATUS //alias <alias_name>
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+
+  mapping for ytrackr_employee
+  {
+    Fullname = first_name;
+    Utilization = utilization;
+
+  }
+  mapping for ytrackr_emprj
+  {
+    Comments = comments;
+    ProjDaysPerWeek = proj_days_per_week;
+    Status = status;
+  }
+
+  mapping for ytrackr_projects
+  {
+    ProjManager = proj_manager;
+    ProjName = proj_name;
+    Stream = stream;
+    DeliveryManager = delievery_manager;
+
+
+  }
+
+}

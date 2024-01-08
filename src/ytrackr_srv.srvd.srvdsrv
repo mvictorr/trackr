@@ -1,0 +1,14 @@
+@EndUserText.label: 'Service definition for Trackr app'
+define service YTRACKR_SRV {
+  expose ytrackr_i_teams as Teams;
+  expose ytrackr_i_employee as Employees;
+  expose ytrackr_i_emp_prj as EmpProj;
+  expose ytrackr_member_del as Members;
+  expose ytrackr_i_projects as Projects;
+  expose YTRACKR_C_STATUS as ProjStat;
+  expose YTRACKR_C_GET_ROLE as RolesList;
+  expose YTRACKR_C_GET_STATUS as StatusList;
+  expose ytrackr_c_status_projection as statc;
+  expose YTRACKR_C_GET_TOTALCAP as GetTotalCap;
+  expose ytrackr_c_get_export as GetExport;
+}
